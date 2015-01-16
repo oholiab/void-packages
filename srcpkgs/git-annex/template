@@ -1,0 +1,26 @@
+# Template file for 'git-annex'
+pkgname=git-annex
+version=5.20150113
+revision=1
+hostmakedepends="ghc cabal-install pkg-config"
+makedepends="glibc>=2.2.15 libffi>=2.3.0.4 gmp gnutls-devel>=2.12.17_0 gsasl-devel>=1.4 icu-libs>=52 libidn>=1.13 libxml2-devel>=2.7.4 zlib>=1.1.4 libressl rsync wget curl openssh>=5.6p1 graphviz bup nss-mdns lsof gnupg bind>=9 quvi git"
+depends="glibc>=2.2.15 libffi>=2.3.0.4 gmp gnutls>=2.12.17_0 gsasl>=1.4 icu-libs>=52 libidn>=1.13 libxml2>=2.7.4 zlib>=1.1.4 git>=1.8.4 libressl rsync wget curl openssh>=5.6p1 graphviz bup nss-mdns lsof gnupg bind>=9 quvi git"
+short_desc="Manage large files without checking contents in"
+maintainer="Matt Carroll <oholiab@gmail.com>"
+license="AGPL-3"
+homepage="git-annex.branchable.com"
+
+do_install () {
+	cabal update
+	cabal install happy --bindir=/usr/bin
+	cabal install alex --bindir=/usr/bin
+	cabal install c2hs --bindir=/usr/bin
+	cabal install git-annex --bindir=$DESTDIR/usr/bin
+	# Cabal install dependencies create a bunch of unneeded binaries
+	rm $DESTDIR/usr/bin/clientsession-generate
+	rm $DESTDIR/usr/bin/yaml2json
+	rm $DESTDIR/usr/bin/hdav
+	rm $DESTDIR/usr/bin/warp
+	rm $DESTDIR/usr/bin/json2yaml
+	rm $DESTDIR/usr/bin/hjsmin
+}
