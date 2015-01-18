@@ -1,0 +1,7 @@
+--- config.def.h1	2015-01-18 23:20:57.752626244 +0000
++++ config.def.h	2015-01-18 23:21:18.222625878 +0000
+@@ -92,4 +92,3 @@
+     { MODKEY|GDK_SHIFT_MASK,GDK_s,      toggle,     { .v = "enable-scripts" } },
+     { MODKEY|GDK_SHIFT_MASK,GDK_v,      toggle,     { .v = "enable-plugins" } },
+ };
+-
