@@ -1,0 +1,11 @@
+--- src/music-players.h	2015-01-24 17:37:22.509127214 +0000
++++ src/music-players.h	2015-01-24 17:43:59.694120101 +0000
+@@ -2279,6 +2279,8 @@
+       DEVICE_FLAGS_ANDROID_BUGS },
+   { "HTC", 0x0bb4, "HTC One (MTP+ADB+CDC)", 0x0f5f,
+       DEVICE_FLAGS_ANDROID_BUGS },
++  { "HTC", 0x0bb4, "HTC One M8 (MTP+ADB+CDC)", 0x0f25,
++      DEVICE_FLAGS_ANDROID_BUGS },
+   { "HTC", 0x0bb4, "HTC One (MTP+CDC)", 0x0f60,
+       DEVICE_FLAGS_ANDROID_BUGS },
+   { "HTC", 0x0bb4, "HTC One (MTP+ADB)", 0x0f63,
