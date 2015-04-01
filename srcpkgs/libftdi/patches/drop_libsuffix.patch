@@ -1,0 +1,7 @@
+*** CMakeLists.txt      2015-03-29 18:46:25.546801661 +0100
+--- CMakeLists.txt.     2015-03-29 18:47:10.927800848 +0100
+*************** if ( NOT DEFINED LIB_SUFFIX )
+*** 58 ****
+!       set ( LIB_SUFFIX 64 )
+--- 58 ----
+!       #set ( LIB_SUFFIX 64 )

@@ -2,21 +2,21 @@
 pkgname=libftdi
 version=1.2
 revision=1
-#wrksrc=
+wrksrc=libftdi1-1.2
 #create_wrksrc=yes
 #only_for_archs="i686 x86_64"
 build_style=cmake
-#configure_args=""
+#configure_args="-DLIB_SUFFIX:STRING=''"
 #make_build_args=""
 #make_install_args=""
 #conf_files=""
 #make_dirs="/var/log/dir 0755 root root"
-hostmakedepends="doxygen"
+hostmakedepends="doxygen cmake"
 makedepends="confuse-devel boost-devel swig python-devel libusb-devel"
 depends="libusb"
 short_desc="libftdi - A library (using libusb) to talk to FTDI's UART/FIFO chips"
 maintainer="Matt Carroll <oholiab@gmail.com>"
 license="LGPL-2"
 homepage="http://www.intra2net.com/en/developer/libftdi/download.php"
-distfiles="http://developer.intra2net.com/git/?p=libftdi;a=snapshot;h=0b6f22091fc3547103f094dea585acc8e21eb008;sf=tgz"
-checksum=1cc890eed69c96054e6b7da6b419d303dcfe13786bfc3bb8c929c6e367efee0e
+distfiles="http://www.intra2net.com/en/developer/libftdi/download/libftdi1-1.2.tar.bz2"
+checksum=a6ea795c829219015eb372b03008351cee3fb39f684bff3bf8a4620b558488d6
